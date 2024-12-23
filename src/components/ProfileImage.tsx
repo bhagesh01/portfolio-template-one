@@ -17,9 +17,9 @@ const ProfileImage = () => {
     //     />
     //   </div>
     // </div>
-    <div className="h-[40vh] w-[40vh] md:h-[50vh] md:w-[50vh] bg-gradient-to-l from-gray-400 to-gray-700 rounded-2xl flex flex-col justify-between items-center">
+    <div className="h-[40vh] w-[40vh] md:h-[50vh] md:w-[50vh] bg-gradient-to-l from-gray-400 to-gray-700 md:rounded-2xl rounded-full flex flex-col justify-between items-center">
       <div></div>
-      <img src="./vijay.png" alt="vijay bhai" className="h-[90%] w-full rounded-2xl" />
+      <img src="./vijay.png" alt="vijay bhai" className="h-[90%] w-full rounded-full md:rounded-2xl" />
     </div>
   );
 };

@@ -55,6 +55,9 @@ export default function Home() {
       </div>
 
 
+      <div className='border-[1px] rounded-full hover:bg-gray-200 text-black'>
+      <Link to={"/about"}> <img className='rounded-full h-14 w-14'  src='./vijay.png' alt='logo' /> </Link>
+      </div>
       <div className='p-3 border-[1px] rounded-full hover:bg-gray-200 text-black'>
       <a href="https://linkedin.com" target='_blank'> <LinkedinIcon/> </a>
       </div>
