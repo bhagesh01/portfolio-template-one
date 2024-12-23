@@ -36,7 +36,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 1.2 }}
           >
             <Link
-              to="/services"
+              to="/projects"
               className="group relative inline-flex items-center overflow-hidden rounded-full bg-indigo-600 px-10 py-5 text-white focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2"
             >
               <span className="absolute inset-x-0 bottom-0 h-[2px] bg-white transition-all group-hover:h-full group-hover:bg-white"></span>
