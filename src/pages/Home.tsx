@@ -56,7 +56,7 @@ export default function Home() {
 
 
       <div className='border-[1px] rounded-full hover:bg-gray-200 text-black'>
-      <Link to={"/about"}> <img className='rounded-full h-14 w-14'  src='./vijay.png' alt='logo' /> </Link>
+      <Link to={"/about"}> <img className='rounded-full h-14 w-14 object-cover'  src='https://images.unsplash.com/photo-1680458865250-319a307b4506?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='logo' /> </Link>
       </div>
       <div className='p-3 border-[1px] rounded-full hover:bg-gray-200 text-black'>
       <a href="https://linkedin.com" target='_blank'> <LinkedinIcon/> </a>

@@ -8,7 +8,7 @@ import PageTransition from './PageTransition';
 const navItems = [
   { path: '/', label: 'Home' },
   { path: '/about', label: 'About' },
-  { path: '/services', label: 'Services' },
+  { path: '/projects', label: 'Projects' },
   { path: '/contact', label: 'Contact' },
 ];
 
@@ -89,7 +89,7 @@ export default function Layout() {
               {isMenuOpen ? (
                 <X className="h-6 w-6 text-white" />
               ) : (
-                <Menu className="h-6 w-6 text-gray-900" />
+                <Menu className="h-6 w-6 text-gray-100" />
               )}
             </button>
           </div>
