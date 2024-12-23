@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+@layer utilities {
+  .h-screen\/3 {
+    height: 33.333vh;
+  }
+}
