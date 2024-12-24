@@ -1,5 +1,5 @@
-import { motion, Variants } from 'framer-motion';
-import { ReactNode } from 'react';
+import { motion, Variants } from "framer-motion";
+import { ReactNode } from "react";
 
 interface AnimatedTextProps {
   children: ReactNode;
@@ -24,9 +24,9 @@ const textVariants: Variants = {
 
 export default function AnimatedText({ children, delay = 0 }: AnimatedTextProps) {
   return (
-    <span className="inline-block h-fit overflow-hidden">
+    <span className="inline-block h-auto w-fit overflow-visible py-2">
       <motion.span
-        className="inline-block"
+        className="inline-block break-words whitespace-normal"
         variants={textVariants}
         initial="hidden"
         animate="visible"

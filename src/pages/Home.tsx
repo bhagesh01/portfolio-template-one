@@ -37,9 +37,9 @@ export default function Home() {
           >
             <Link
               to="/projects"
-              className="group relative inline-flex items-center overflow-hidden rounded-full bg-indigo-600 px-10 py-5 text-white focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2"
+              className="group relative inline-flex items-center overflow-hidden rounded-full bg-indigo-600 hover:border-white px-10 py-5 text-white focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
             >
-              <span className="absolute inset-x-0 bottom-0 h-[2px] bg-white transition-all group-hover:h-full group-hover:bg-white"></span>
+              <span className="absolute inset-x-0 -bottom-4 h-[2px] bg-white transition-all group-hover:h-full group-hover:bottom-0 group-hover:bg-white"></span>
               <span className="relative flex items-center gap-2 text-sm font-semibold tracking-wide transition-colors group-hover:text-indigo-600">
                 Explore My Work
                 <ArrowRight className="h-4 w-4" />
@@ -81,31 +81,32 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <footer className="lg:hidden w-full md:px-20 py-4 border-t border-gray-200 text-center">
-        <span className="md:text-lg text-lg text-gray-600">
-          All credits reserved{' '}
-          <a href="#github" className="text-indigo-300">
-            @Bobby
-          </a>
-        </span>
-        <div className="flex justify-center gap-3 mt-2">
-          <div className="p-3 border-[1px] rounded-full hover:bg-gray-200 text-black">
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-              <LinkedinIcon />
-            </a>
-          </div>
-          <div className="p-3 border-[1px] rounded-full hover:bg-gray-200 text-black">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-              <GithubIcon />
-            </a>
-          </div>
-          <div className="p-3 border-[1px] rounded-full hover:bg-gray-200 text-black">
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <TwitterIcon />
-            </a>
-          </div>
-        </div>
-      </footer>
+      <footer className="lg:hidden w-full px-4 md:px-20 py-4 border-t border-gray-200 text-center" style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}>
+  <span className="md:text-lg text-lg text-gray-600">
+    All credits reserved{' '}
+    <a href="#github" className="text-indigo-300">
+      @Bobby
+    </a>
+  </span>
+  <div className="flex justify-center gap-3 mt-2">
+    <div className="p-3 border-[1px] rounded-full hover:bg-gray-200 text-black">
+      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+        <LinkedinIcon />
+      </a>
+    </div>
+    <div className="p-3 border-[1px] rounded-full hover:bg-gray-200 text-black">
+      <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+        <GithubIcon />
+      </a>
+    </div>
+    <div className="p-3 border-[1px] rounded-full hover:bg-gray-200 text-black">
+      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+        <TwitterIcon />
+      </a>
+    </div>
+  </div>
+</footer>
+
     </div>
   );
 }
