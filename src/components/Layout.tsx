@@ -1,19 +1,19 @@
-import { AnimatePresence, motion } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
-import { Link, Outlet, useLocation } from 'react-router-dom';
-import { useLoading } from '../context/LoadingContext';
-import PageTransition from './PageTransition';
+import { AnimatePresence, motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
+import { Link, Outlet, useLocation } from "react-router-dom";
+import { useLoading } from "../context/LoadingContext";
+import PageTransition from "./PageTransition";
 
 const navItems = [
-  { path: '/', label: 'Home' },
-  { path: '/about', label: 'About' },
-  { path: '/projects', label: 'Projects' },
-  { path: '/contact', label: 'Contact' },
+  { path: "/", label: "Home" },
+  { path: "/about", label: "About" },
+  { path: "/projects", label: "Projects" },
+  { path: "/contact", label: "Contact" },
 ];
 
 const menuVariants = {
-  hidden: { x: '100%' },
+  hidden: { x: "100%" },
   visible: {
     x: 0,
     transition: {
@@ -22,7 +22,7 @@ const menuVariants = {
     },
   },
   exit: {
-    x: '100%',
+    x: "100%",
     transition: {
       duration: 0.8,
       ease: [0.76, 0, 0.24, 1],
@@ -50,9 +50,20 @@ export default function Layout() {
 
   if (isLoading) return null;
 
+  function downloadResume() {
+    // Replace with the actual path to your PDF file
+    const pdfUrl = "./creator.pdf";
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "creator.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
   return (
     <div className="min-h-screen bg-gray-50">
-      <motion.nav 
+      <motion.nav
         className="fixed w-full z-50 md:rounded-br-xl md:rounded-bl-xl md:rounded-tr-none md:rounded-tl-none rounded-full bg-white border-[1px] px-8"
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -65,20 +76,28 @@ export default function Layout() {
             </Link>
 
             {/* Desktop Menu */}
-            <div className="hidden md:flex space-x-12">
+            <div className="hidden md:flex items-center justify-center space-x-12">
               {navItems.map((item) => (
                 <Link
                   key={item.path}
                   to={item.path}
                   className={`${
                     location.pathname === item.path
-                      ? 'text-indigo-600'
-                      : 'text-gray-900 hover:text-indigo-600'
+                      ? "text-indigo-600"
+                      : "text-gray-900 hover:text-indigo-600"
                   } transition-colors duration-300 text-sm uppercase font-semibold tracking-widest`}
                 >
                   {item.label}
                 </Link>
               ))}
+              <button
+                onClick={() => {
+                  downloadResume();
+                }}
+                className="bg-white border-[1px] border-black rounded-full px-4 py-2 text-black"
+              >
+                Download Resume
+              </button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -123,6 +142,22 @@ export default function Layout() {
                     </Link>
                   </motion.div>
                 ))}
+                <motion.div
+                  initial={{ opacity: 0, x: -30 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: 0.6 }}
+                >
+                  <button
+                    onClick={() => {
+                      downloadResume();
+                    }}
+                    className="bg-white border-[1px] border-black rounded-full px-8 py-4 text-2xl text-black
+                hover:bg-transparent hover:text-white hover:border-white transition-colors duration-300
+                "
+                  >
+                    Download Resume
+                  </button>
+                </motion.div>
               </div>
             </motion.div>
           )}

@@ -84,7 +84,10 @@ export default function Home() {
       <footer className="lg:hidden w-full px-4 md:px-20 py-4 border-t border-gray-200 text-center" style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}>
   <span className="md:text-lg text-lg text-gray-600">
     All credits reserved{' '}
-    <a href="#github" className="text-indigo-300">
+    <a 
+    href={"https://x.com/BansodeBha11285"} 
+    target='_blank'
+    className="text-indigo-300">
       @Bobby
     </a>
   </span>
