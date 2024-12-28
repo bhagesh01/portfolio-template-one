@@ -57,7 +57,7 @@ export default function Home() {
           <Link to="/about">
             <img
               className="rounded-full h-12 w-12 object-cover"
-              src="https://images.unsplash.com/photo-1680458865250-319a307b4506?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="./vector-girl.png"
               alt="logo"
             />
           </Link>

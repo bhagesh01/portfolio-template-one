@@ -4,9 +4,10 @@ import Layout from './components/Layout';
 import LoadingScreen from './components/LoadingScreen';
 import { LoadingProvider } from './context/LoadingContext';
 import About from './pages/About';
-import Contact from './pages/Contact';
+// import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
+import HireMe from './pages/HireMe';
 
 function AppRoutes() {
   const location = useLocation();
@@ -19,7 +20,7 @@ function AppRoutes() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="projects" element={<Projects />} />
-          <Route path="contact" element={<Contact />} />
+          <Route path="contact" element={<HireMe />} />
         </Route>
       </Routes>
     </AnimatePresence>
