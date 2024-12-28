@@ -52,13 +52,15 @@ export default function Layout() {
 
   function downloadResume() {
     // Replace with the actual path to your PDF file
-    const pdfUrl = "./creator.pdf";
-    const link = document.createElement("a");
-    link.href = pdfUrl;
-    link.download = "creator.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // const pdfUrl = "./creator.pdf";
+    // const link = document.createElement("a");
+    // link.href = pdfUrl;
+    // link.download = "creator.pdf";
+    // document.body.appendChild(link);
+    // link.click();
+    // document.body.removeChild(link);
+
+    alert("button for downloading the resume");
   }
 
   return (
