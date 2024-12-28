@@ -96,6 +96,7 @@ export default function Layout() {
               ))}
               <button
                 onClick={() => {
+                  setIsMenuOpen(!isMenuOpen)
                   downloadResume();
                 }}
                 className="bg-white border-[1px] border-black rounded-full px-4 py-2 text-black"
@@ -153,6 +154,7 @@ export default function Layout() {
                 >
                   <button
                     onClick={() => {
+                      setIsMenuOpen(!isMenuOpen)
                       downloadResume();
                     }}
                     className="bg-white border-[1px] border-black rounded-full px-8 py-4 text-2xl text-black
