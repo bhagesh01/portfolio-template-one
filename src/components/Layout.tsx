@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { useLoading } from "../context/LoadingContext";
 import PageTransition from "./PageTransition";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 
 const navItems = [
   { path: "/", label: "Home" },
@@ -67,6 +67,7 @@ export default function Layout() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <ToastContainer/>
       <motion.nav
         className="fixed w-full z-50 md:rounded-br-xl md:rounded-bl-xl md:rounded-tr-none md:rounded-tl-none rounded-full bg-white border-[1px] px-8"
         initial={{ y: -100 }}
