@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { useLoading } from "../context/LoadingContext";
 import PageTransition from "./PageTransition";
+import { toast } from "react-toastify";
 
 const navItems = [
   { path: "/", label: "Home" },
@@ -60,7 +61,8 @@ export default function Layout() {
     // link.click();
     // document.body.removeChild(link);
 
-    alert("button for downloading the resume");
+    // alert("button for downloading the resume")
+    toast.info("button for downloading the resume")
   }
 
   return (
